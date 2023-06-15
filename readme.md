@@ -42,5 +42,5 @@ Implement an Express API endpoint to query the database and generate an Excel sh
   4. endTime (string): The end time in unix format.
 
 ```
-POST http://localhost:8000/export-data?deviceName=DeviceName&sensors=sensor1,sensor2&startTime=2023-06-15T09:00:00Z&endTime=2023-06-15T10:00:00Z
+GET http://localhost:8000/export-data?deviceName=DeviceName&sensors=sensor1,sensor2&startTime=2023-06-15T09:00:00Z&endTime=2023-06-15T10:00:00Z
 ```
