@@ -33,8 +33,8 @@ Implement an Express API endpoint to query the database and generate an Excel sh
 
 ## API Endpoint
 
-- Request Method: POST
-- Request URL: http://localhost:8000/export-data
+- Request Method: GET
+- Request URL: http://localhost:3000/export-data
 - Query Parameters:
   1. deviceName (string): The name of the device.
   2. sensors (string): A comma-separated list of sensors.
@@ -42,5 +42,6 @@ Implement an Express API endpoint to query the database and generate an Excel sh
   4. endTime (string): The end time in unix format.
 
 ```
-GET http://localhost:8000/export-data?deviceName=DeviceName&sensors=sensor1,sensor2&startTime=2023-06-15T09:00:00Z&endTime=2023-06-15T10:00:00Z
+GET http://localhost:8000/export-data?deviceName=DeviceName&sensors=
+sensor1,sensor2&startTime=2023-06-15T09:00:00Z&endTime=2023-06-15T10:00:00Z
 ```

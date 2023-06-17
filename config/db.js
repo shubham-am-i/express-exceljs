@@ -2,17 +2,17 @@
 import Influx from 'influx';
 import colors from 'colors';
 
-const influx = new Influx.InfluxDB({
+export const influx = new Influx.InfluxDB({
   host: 'localhost',
-  database: 'excel_db',
+  database: 'consumption_range',
 });
 
 // Connect to the InfluxDB server
 async function connectToDatabase() {
   try {
     const names = await influx.getDatabaseNames();
-    if (!names.includes('excel_db')) {
-      await influx.createDatabase('excel_db');
+    if (!names.includes('consumption_range')) {
+      await influx.createDatabase('consumption_range');
     }
     console.log('Influx DB Connected'.bgCyan);
   } catch (error) {
